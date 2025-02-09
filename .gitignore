@@ -45,4 +45,4 @@ node_modules/
 build/
 .cache/
 
-/public
+# /public
