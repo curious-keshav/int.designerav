@@ -3,7 +3,7 @@ import HTMLFlipBook from "react-pageflip";
 import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
-import flipbookImagesData from "./flipbookImagesData";
+import flipbookImagesData from "./flipbookImagesDataCDN";
 import Flipbook from "./Flipbook";
 
 const FramerImage = motion(Image);
@@ -11,7 +11,6 @@ const FramerImage = motion(Image);
 const FlipbookContainer = ({id,isPortrait,isMobile}) => {
   const flipBookRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
-  // const [isPortrait, setIsPortrait] = useState(true);
   const [isMobileView, setIsMobileView] = useState(isMobile);
     useEffect(() => {
         setIsMobileView(isMobile);
@@ -42,7 +41,7 @@ const FlipbookContainer = ({id,isPortrait,isMobile}) => {
 
   return (
     <div>
-      <div className="relative flex flex-col gap-8 justify-center items-center p-8 h-fit md:h-fit overflow-hidden my-8 z-0">
+      <div className=" flex flex-col gap-8 justify-center items-center p-0 h-fit md:h-fit overflow-hidden my-8 z-0">
       
         <div className="flex justify-center w-full mt-6 gap-10">
           <motion.div
@@ -54,16 +53,6 @@ const FlipbookContainer = ({id,isPortrait,isMobile}) => {
             Elevation
           </motion.div>
         </div>
-
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: "transparent",
-            backgroundPosition: "center",
-            filter: "blur(15px) brightness(0.6)",
-            zIndex: -1,
-          }}
-        ></div>
 
         <motion.div
           className="relative z-10"

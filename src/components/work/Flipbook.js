@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import HTMLFlipBook from 'react-pageflip';
-import flipbookImagesData from "./flipbookImagesData";
+import { CldImage } from 'next-cloudinary';
 
 
 const Flipbook = forwardRef(( props ,ref) => {
@@ -9,7 +9,6 @@ const Flipbook = forwardRef(( props ,ref) => {
     useEffect(() => {
         setIsMobileView(isMobile);
     }, [isMobile]);
-    console.log(imagesToRender,"efefefe")
 
     return (
         isMobileView ? (
@@ -18,11 +17,11 @@ const Flipbook = forwardRef(( props ,ref) => {
                 style={{}}
                 ref={ref}
                 startZIndex={1}
-                width={500}
-                height={300}
-                minWidth={400}
+                width={400}
+                height={225}
+                minWidth={350}
                 maxWidth={1000}
-                minHeight={150}
+                minHeight={100}
                 maxHeight={300}
                 size="stretch"
                 drawShadow={true}
@@ -41,14 +40,13 @@ const Flipbook = forwardRef(( props ,ref) => {
                 className="flipbook"
                 onFlip={onFlip}
             >
-
                 {imagesToRender.map((imageSrc, index) => (
                     <div className="page" key={`${selectedProject}-${index}`}>
-                        <img
+                        <CldImage
                             src={imageSrc}
                             alt={`Page ${index + 1}`}
                             className="w-full h-full object-cover"
-                            layout="fill"
+                            // layout="fill"
                             width={4080}
                             height={2640}
                         />
@@ -87,11 +85,11 @@ const Flipbook = forwardRef(( props ,ref) => {
 
                 {imagesToRender.map((imageSrc, index) => (
                     <div className="page" key={`${selectedProject}-${index}`}>
-                        <img
+                        <CldImage
                             src={imageSrc}
                             alt={`Page ${index + 1}`}
                             className="w-full h-full object-cover"
-                            layout="fill"
+                            // layout="fill"
                             width={4080}
                             height={2640}
                         />

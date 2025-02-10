@@ -6,7 +6,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, WhatsappIcon } from './Icons
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white font-medium text-base pt-4 pb-2">
+    <footer className="w-full bg-black text-white font-medium text-base pb-2">
       <Layout className="flex  md:flex-col flex-wrap justify-between  md:items-start gap-6 md:gap-10 text-center md:text-left">
         
         {/* Contact Section */}

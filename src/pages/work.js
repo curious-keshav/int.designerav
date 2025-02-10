@@ -4,15 +4,11 @@ import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
-// import project5 from "../../public/images/projects/work5.jpg";
-// import project6 from "../../public/images/projects/work6.jpg";
-// import project7 from "../../public/images/projects/work7.jpg";
 import TransitionEffect from '@/components/TransitionEffect';
 import FeaturedWorkContainer from '@/components/work/FeaturedWorkContainer';
 import FeaturedWorkVideoContainer from '@/components/work/FeaturedWorkVideoContainer';
 import WorkContainer from '@/components/work/WorkContainer';
-import flipbookImagesData from "../components/work/flipbookImagesData";
+import flipbookImagesData from "../components/work/flipbookImagesDataCDN";
 import Link from 'next/link';
 import contactWork from '../../public/images/svgs/contactWork.svg';
 
@@ -40,10 +36,10 @@ const Projects = () => {
                 <Layout className='pt-16 bg-dark'>
                     <AnimatedText className="mb-4 lg:!text-7xl sm:my-2 sm:!text-6xl xs:!text-4xl text-white font-Poppins sm:mt-6" text="Photo Albums" />
                     <div className='text-[#28d29f] mb-16 text-sm md:!text-xs lg:!text-xs  sm:text-4xl xs:text-3xl font-semibold text-center'>
-  CLICK ON ANY ALBUM TO SEE ALL PHOTOS
-</div>
+                        CLICK ON ANY ALBUM TO SEE ALL PHOTOS
+                    </div>
                     <div className='grid grid-cols-12 gap-12 gap-y-16  xl:gap-x-8 lg:gap-x-4 md:gap-y-12 sm:gap-x-0'>
-                        
+
                         <div className='col-span-6 sm:col-span-12'>
                             <WorkContainer
                                 link="/work/4"
