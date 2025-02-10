@@ -29,7 +29,7 @@ const Skills = () => {
             >
               <div className="text-[#2979FF] text-4xl mb-2">{skill.icon}</div>
               <h3 className="text-sm font-semibold text-white ">{skill.name}</h3>
-              <p className="text-xs text-gray-400 tracking-tighter ">{skill.level}</p>
+              {/* <p className="text-xs text-gray-400 tracking-tighter ">{skill.level}</p> */}
             </div>
           ))}
         </div>
