@@ -3,13 +3,13 @@ import { FaTools, FaPaintBrush, FaLaptopCode, FaDraftingCompass } from "react-ic
 
 const Skills = () => {
   const skills = [
-    { name: "D5", level: "Intermediate", icon: <FaDraftingCompass /> },
-    { name: "Enscape", level: "Advanced", icon: <FaTools /> },
     { name: "AutoCad", level: "Expert", icon: <FaDraftingCompass /> },
     { name: "SketchUp", level: "Advanced", icon: <FaTools /> },
-    { name: "Lumion", level: "Advanced", icon: <FaLaptopCode /> },
-    { name: "Rendering", level: "Intermediate", icon: <FaPaintBrush /> },
     { name: "Photoshop", level: "Advanced", icon: <FaPaintBrush /> },
+    { name: "Lumion", level: "Advanced", icon: <FaLaptopCode /> },
+    { name: "D5", level: "Intermediate", icon: <FaDraftingCompass /> },
+    { name: "Enscape", level: "Advanced", icon: <FaTools /> },
+    { name: "Rendering", level: "Intermediate", icon: <FaPaintBrush /> },
     { name: "Filmora", level: "Intermediate", icon: <FaLaptopCode /> },
   ];
 

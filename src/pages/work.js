@@ -115,7 +115,7 @@ const Projects = () => {
                     <div className='col-span-12'>
                         <article className='w-full flex items-center justify-between relative rounded-3xl border border-solid border-[#2979FF] shadow-xl lg:flex-col xs:rounded-2xl overflow-hidden'>
                             {/* Background Gradient */}
-                            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-gradient-to-br from-[#1a1b1b] to-[#2979FF] xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]'></div>
+                            <div className='absolute top-0 -z-10 w-[101%] h-[103%] rounded-3xl bg-gradient-to-br from-[#1a1b1b] to-[#2979FF]  sm:h-[102%] xs:w-full xs:rounded-2xl'></div>
 
                             {/* Left Image Section */}
                             <div className='w-full h-auto max-h-[50vh] xs:max-h-[30vh]'>
