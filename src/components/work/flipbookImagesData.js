@@ -20,7 +20,6 @@ const flipbookImagesData = {
       "project4": [
         "/images/work/4/954.jpg",
         "/images/work/4/1056.png",
-        "/images/work/4/1057.png",
         "/images/work/4/1058.png",
         "/images/work/4/1059.png"
       ],
