@@ -4,15 +4,20 @@ import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 import flipbookImagesData from "./flipbookImagesData";
+import Flipbook from "./Flipbook";
 
 const FramerImage = motion(Image);
 
-const FlipbookContainer = (id) => {
+const FlipbookContainer = ({id,isPortrait,isMobile}) => {
   const flipBookRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
-  const [isPortrait, setIsPortrait] = useState(true);
+  // const [isPortrait, setIsPortrait] = useState(true);
+  const [isMobileView, setIsMobileView] = useState(isMobile);
+    useEffect(() => {
+        setIsMobileView(isMobile);
+    }, [isMobile]);
 
-  const work = "project"+id.id;
+  const work = "project"+id;
   const [selectedProject, setSelectedProject] = useState(work);
 
   useEffect(() => {
@@ -31,26 +36,13 @@ const FlipbookContainer = (id) => {
     }
   };
 
-  useEffect(() => {
-    const updateScreenOrientation = () => {
-      const isPortraitMode = window.innerHeight > window.innerWidth;
-      setIsPortrait(isPortraitMode);
-    };
-
-    updateScreenOrientation();
-    window.addEventListener("resize", updateScreenOrientation);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenOrientation);
-    };
-  }, []);
-
   const imagesToRender = flipbookImagesData.projects[selectedProject] || [];
+  console.log(work,"eide")
 
 
   return (
     <div>
-      <div className="relative flex flex-col gap-8 justify-center items-center p-8 h-fit md:h-screen overflow-hidden my-8">
+      <div className="relative flex flex-col gap-8 justify-center items-center p-8 h-fit md:h-fit overflow-hidden my-8 z-0">
       
         <div className="flex justify-center w-full mt-6 gap-10">
           <motion.div
@@ -80,46 +72,7 @@ const FlipbookContainer = (id) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <HTMLFlipBook
-            ref={flipBookRef}
-            width={800}
-            height={450}
-            minWidth={600}
-            maxWidth={1000}
-            minHeight={337.5}
-            maxHeight={562.5}
-            size="stretch"
-            drawShadow={true}
-            flippingTime={1000}
-            usePortrait={false}
-            startPage={0}
-            autoSize={true}
-            maxShadowOpacity={0.5}
-            showCover={false}
-            mobileScrollSupport={true}
-            clickEventForward={true}
-            useMouseEvents={true}
-            swipeDistance={30}
-            showPageCorners={true}
-            disableFlipByClick={false}
-            className="flipbook"
-            onFlip={onFlip}
-          >
-
-            {imagesToRender.map((imageSrc, index) => (
-              <div className="page" key={`${selectedProject}-${index}`}>
-                <FramerImage
-                  src={imageSrc}
-                  alt={`Page ${index + 1}`}
-                  className="w-full h-full object-cover"
-                  layout="fill"
-                  width={4080}
-                  height={2640}
-                />
-              </div>
-            ))}
-
-          </HTMLFlipBook>
+         <Flipbook imagesToRender={imagesToRender} isPortrait={isPortrait} isMobile={isMobile} ref={flipBookRef}  onFlip={onFlip} selectedProject={selectedProject}/>
 
           <div className="flex flex-col gap-4">
             <div className="flex flex-col items-center mt-4">
