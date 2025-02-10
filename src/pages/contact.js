@@ -58,7 +58,7 @@ const Contact = () => {
           <Image
             src={contactdark}
             alt="contact"
-            className="flex-1 object-cover transform scale-115 mt-4 md:hidden lg:hidden "
+            className="flex-1 object-cover transform scale-125 mt-4 md:hidden lg:hidden "
             priority
             
             sizes="(max-width: 768px) 100vw, (max-width:1200px) 30vw,30vw"
