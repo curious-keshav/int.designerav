@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       {/* Page transition effect */}
       <TransitionEffect />
-      <main className='flex items-center h-fit md:h-screen  text-white w-full dark:text-light'>
+      <main className='flex items-center h-fit  text-white w-full dark:text-light'>
         {/* <Layout className='pt-0 md:pt-16 sm:pt-8 bg-[#554940] bg-dark'> */}
         <Layout className=' bg-dark flex align-middle items-center justify-center '>
           <div className='flex align-middle items-center justify-center w-full lg:flex-col md:flex-col gap-16 md:gap-0'>

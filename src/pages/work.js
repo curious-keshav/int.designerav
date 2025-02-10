@@ -38,7 +38,7 @@ const Projects = () => {
 
             <main className='w-full flex flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-16 bg-dark'>
-                    <AnimatedText className="mb-4 lg:!text-7xl sm:my-2 sm:!text-6xl xs:!text-4xl text-white font-Poppins" text="Photo Albums" />
+                    <AnimatedText className="mb-4 lg:!text-7xl sm:my-2 sm:!text-6xl xs:!text-4xl text-white font-Poppins sm:mt-6" text="Photo Albums" />
                     <div className='text-[#28d29f] mb-16 text-sm md:!text-xs lg:!text-xs  sm:text-4xl xs:text-3xl font-semibold text-center'>
   CLICK ON ANY ALBUM TO SEE ALL PHOTOS
 </div>
@@ -71,7 +71,7 @@ const Projects = () => {
                         <div className='col-span-12'>
                             <div className='flex flex-col gap-4'>
 
-                                <div className='text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] dark:text-light'>Video Walkthrough</div>
+                                <div className='text-white font-black md:text-[50px] sm:text-[40px] xs:text-[30px] text-[20px] dark:text-light'>Video Walkthrough</div>
                                 <FeaturedWorkVideoContainer link={"https://www.youtube.com/embed/7DFMj_0wB5s?si=NfQvNRXE6ERbX67q"} />
                             </div>
                         </div>

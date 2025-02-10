@@ -53,7 +53,7 @@ const Contact = () => {
 
       <main className="overflow-hidden flex">
         <Layout
-          className="xl:mt-12 bg-[#1a1b1b] flex !flex-row xl:flex-row gap-10 overflow-hidden justify-center flex-wrap "
+          className=" bg-[#1a1b1b] flex !flex-row xl:flex-row gap-10 overflow-hidden justify-center flex-wrap "
         >
           <Image
             src={contactdark}
@@ -65,7 +65,7 @@ const Contact = () => {
           />
           <div className='hidden md:block lg:block text-[#28d29f]  text-sm md:!text-xs lg:!text-xs  sm:text-4xl xs:text-3xl font-semibold text-center mt-6'>
           Let's discuss and visualize your needs.
-</div>
+          </div>
 
           <motion.div className="flex-1 border border-solid p-8 rounded-2xl border-light ">
             <p className="sm:text-[18px] text-[14px] text-white uppercase tracking-wider dark:text-light">
