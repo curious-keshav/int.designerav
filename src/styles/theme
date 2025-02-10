@@ -1,0 +1,25 @@
+🔥 Primary Colors (Main Theme)
+Blue (Accent) → #2979FF (Your primary blue)
+Deep Black (Background) → #0D0D0D (Ultra-dark background)
+
+🎨 Complementary & Supporting Colors
+Color Name	Hex Code	Usage
+Cool Gray	#1E1E1E	Slightly lighter black for contrast & sections
+Gunmetal Gray	#2A2A2E	For text backgrounds & dividers
+Deep Navy	#1B2A49	Subtle blue-black mix for softer elements
+Electric Cyan	#00D4FF	Accent for interactive elements
+Neon Purple	#A020F0	Another pop color for buttons & hover effects
+Teal Glow	#00FFA2	Works well with blue for futuristic highlights
+Fiery Orange	#FF6B00	Contrasting color for alerts or CTAs
+Bright Magenta	#FF007F	Stylish, futuristic pop color
+Silver Gray	#B0B3B8	Clean, muted text & borders
+
+✨ Example Usage
+Background → #0D0D0D (Ultra-dark)
+Cards/Containers → #1E1E1E (Cool gray)
+Borders & Dividers → #2A2A2E (Gunmetal gray)
+Primary Buttons & Highlights → #2979FF (Vibrant blue)
+Hover Effects & Links → #00D4FF (Electric cyan)
+Alerts & Warnings → #FF6B00 (Fiery orange)
+Success/Confirmations → #00FFA2 (Teal glow)
+Minimalist Text → #B0B3B8 (Silver gray)
