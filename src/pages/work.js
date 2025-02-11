@@ -20,7 +20,6 @@ const Projects = () => {
 
     const toggleIsVisibleHandler = () => {
         setIsVisible(!isVisible);
-        console.log(isVisible, "dw")
     }
 
     return (

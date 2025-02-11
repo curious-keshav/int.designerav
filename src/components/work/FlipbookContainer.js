@@ -36,8 +36,6 @@ const FlipbookContainer = ({id,isPortrait,isMobile}) => {
   };
 
   const imagesToRender = flipbookImagesData.projects[selectedProject] || [];
-  console.log(work,"eide")
-
 
   return (
     <div>

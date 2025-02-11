@@ -25,7 +25,6 @@ const ProductPage = ({ product }) => {
       window.removeEventListener('resize', updateScreenOrientation);
     };
   }, []);
-console.log(id,"keshav")
 
   return (
     <div className='bg-[#1a1b1b] flex flex-col'>

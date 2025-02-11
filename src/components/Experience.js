@@ -31,7 +31,7 @@ const Experience = () => {
         target: ref,
         offset: ["start end", "center start"]
     });
-    console.log('scrollYProgress:', scrollYProgress);
+    // console.log('scrollYProgress:', scrollYProgress);
 
     return (
         <div className='my-32 mt-64'>

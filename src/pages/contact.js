@@ -40,7 +40,6 @@ const Contact = () => {
     } catch (error) {
       
     }
-    console.log("first")
   };
 
   return (
