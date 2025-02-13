@@ -41,23 +41,23 @@ const Projects = () => {
 
                         <div className='col-span-6 sm:col-span-12'>
                             <WorkContainer
-                                link="/work/4"
-                                title="GYM Management System "
-                                img={flipbookImagesData.projects["project4"][1]}
+                                link="/work/7"
+                                title=""
+                                img={flipbookImagesData.projects["project7"][0]}
                             />
                         </div>
                         <div className='col-span-6 sm:col-span-12'>
                             <WorkContainer
                                 link="/work/8"
-                                title="GYM Management System "
+                                title=""
                                 img={flipbookImagesData.projects["project8"][1]}
                             />
                         </div>
                         <div className='col-span-12'>
                             <FeaturedWorkContainer
-                                title={"E-BUY"}
+                                title={""}
                                 img={flipbookImagesData.projects["project5"][1]}
-                                summary={"Hello"}
+                                summary={""}
                                 link="/work/5"
                             />
                         </div>
@@ -74,8 +74,8 @@ const Projects = () => {
                         {isVisible && <>
                             <div className='col-span-12'>
                                 <FeaturedWorkContainer
-                                    link="/work/5"
-                                    title={"E-BUY"}
+                                    link="/work/1"
+                                    title={""}
                                     img={flipbookImagesData.projects["project1"][2]}
                                     summary={"Hello"}
                                 />
@@ -84,15 +84,15 @@ const Projects = () => {
                             <div className='col-span-6 sm:col-span-12'>
                                 <WorkContainer
                                     link="/work/6"
-                                    title="GYM Management System "
-                                    img={flipbookImagesData.projects["project4"][2]}
+                                    title=""
+                                    img={flipbookImagesData.projects["project6"][2]}
                                 />
                             </div>
                             <div className='col-span-6 sm:col-span-12'>
                                 <WorkContainer
-                                    link="/work/7"
-                                    title="GYM Management System "
-                                    img={flipbookImagesData.projects["project8"][2]}
+                                    link="/work/4"
+                                    title=""
+                                    img={flipbookImagesData.projects["project4"][2]}
                                 />
                             </div>
                         </>}

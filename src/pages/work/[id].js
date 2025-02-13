@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { CldImage } from 'next-cloudinary';
 import flipbookImagesData from '@/components/work/flipbookImagesDataCDN';
+import WorkTitleMapping from '@/components/work/WorkTitleMapping';
 
 // export async function getStaticPaths() {
 //   const projectIds = Object.keys(flipbookImagesData.projects);
@@ -95,7 +96,7 @@ const ProductPage = ({ product }) => {
                     <div className="absolute inset-0 bg-black bg-opacity-40 hover:bg-opacity-20 transition-all duration-300"></div>
                   </div>
                   <div className="mt-2 md:mt-3 text-center text-white font-medium mb-4 text-sm md:text-base">
-                    {projectId.toUpperCase()}
+                    {WorkTitleMapping?.projects[projectId]?.name.toUpperCase()}
                   </div>
                 </div>
               ))}

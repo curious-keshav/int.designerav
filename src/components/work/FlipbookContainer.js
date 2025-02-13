@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import flipbookImagesData from "./flipbookImagesDataCDN";
 import Flipbook from "./Flipbook";
+import WorkTitleMapping from "./WorkTitleMapping";
 
 const FramerImage = motion(Image);
 
@@ -27,6 +28,7 @@ const FlipbookContainer = ({id,isPortrait,isMobile}) => {
     setCurrentPage(e.data);
     getCurrentPage();
   };
+  console.log(WorkTitleMapping?.projects[work]?.name,"jefie")
 
   const getCurrentPage = () => {
     if (flipBookRef.current) {
@@ -48,7 +50,7 @@ const FlipbookContainer = ({id,isPortrait,isMobile}) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Elevation
+            {WorkTitleMapping?.projects[work]?.name}
           </motion.div>
         </div>
 
