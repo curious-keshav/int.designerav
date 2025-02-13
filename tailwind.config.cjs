@@ -14,8 +14,8 @@ module.exports = {
         mont: ['var(--font-mont)', ...fontFamily.sans],
       },
       colors: {
-        dark: "#0d0d0d",
-        // dark: "#1b1b1b",
+        dark: "#0D0D0D",
+        // dark: "#0D0D0D",
         darkCombo : "#1f1f1f",
         light: "#f5f5f5",
         primary: "#B63E96", // 240,86,199
@@ -29,7 +29,7 @@ module.exports = {
       backgroundImage: {
         
 
-        gradientDark: 'linear-gradient(to bottom, #1b1b1b, #330c0c, #000000)',
+        gradientDark: 'linear-gradient(to bottom, #0D0D0D, #330c0c, #000000)',
 
         circularLight:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 100px)",

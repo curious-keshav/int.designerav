@@ -61,6 +61,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            
           >
             <RotatingCards />
           </div>
