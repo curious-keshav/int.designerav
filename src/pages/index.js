@@ -2,58 +2,16 @@ import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from "../../public/images/profile/developer-pic-4.png"
-import servicePhoto from "../../public/images/service1.jpg"
-import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Icons'
-import HireMe from '@/components/HireMe'
+// import HireMe from '@/components/HireMe'
 import TransitionEffect from '@/components/TransitionEffect'
-import RotatingCards from '@/components/RotatedCards'
-import { useEffect, useState } from 'react'
+import Services from '@/components/Services'
 
 export default function Home() {
-  const [currentService, setCurrentService] = useState(0);
+  
 
-  const handleIndex = (val) => {
-    setCurrentService((currentService + val + 3) % 3);
-  };
-
-  const handleToggleDetails = (index) => {
-    setExpandedCard(expandedCard === index ? null : index);
-  };
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleIndex(1);
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [currentService]);
-
-  const navigateButtons = (buttonName) => {
-    switch (buttonName) {
-      case "Explore our Designs":
-        return "/";
-      case "Book an appointment":
-      case "Contact us":
-        return "/contact-us?tab=contact-us";
-      default:
-        return null;
-    }
-  };
-
-  const handleButtonClick = (buttonName) => {
-    const path = navigateButtons(buttonName);
-    if (path) {
-      navigate(path);
-    }
-  };
+  
   return (
     <>
       <Head className="">
@@ -92,21 +50,7 @@ export default function Home() {
             </div>
           </Layout>
 
-          <div
-            className="relative w-full min-h-[70vh]  flex justify-center items-center"
-            style={{
-              backgroundImage: `url(${servicePhoto.src})`,
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed",
-              backgroundSize: "cover",
-              fontFamily: "Poppins",
-            }}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <RotatingCards />
-          </div>
+          <Services/>
         </div>
 
         {/* Hire Me section */}

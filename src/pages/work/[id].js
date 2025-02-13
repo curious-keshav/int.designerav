@@ -3,7 +3,42 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { CldImage } from 'next-cloudinary';
 import flipbookImagesData from '@/components/work/flipbookImagesDataCDN';
-import Link from 'next/link';
+
+// export async function getStaticPaths() {
+//   const projectIds = Object.keys(flipbookImagesData.projects);
+//   console.log("Available projects:", projectIds);
+
+//   const paths = projectIds.map((projectId) => ({
+//     params: { id: projectId }, 
+//   }));
+
+//   console.log("Generated paths:", paths);
+
+//   return {
+//     paths,
+//     fallback: "blocking",
+//   };
+// }
+
+
+// export async function getStaticProps({ params }) {
+//   console.log("Fetching data for ID:", params.id);
+//   console.log("Available projects:", Object.keys(flipbookImagesData.projects));
+
+//   // const product = flipbookImagesData.projects[params.id] || null;
+//   const product = flipbookImagesData.projects[params.id] || null;
+//   console.log(params.id,"Keshavvv");
+
+//   if (!product) {
+//     console.log("❌ Product not found for ID:", params.id);
+//     return { notFound: true };
+//   }
+
+//   return {
+//     props: { product },
+//     revalidate: 10,
+//   };
+// }
 
 const ProductPage = ({ product }) => {
   const router = useRouter();
@@ -46,7 +81,7 @@ const ProductPage = ({ product }) => {
             <div className="flex gap-3 md:gap-6 overflow-x-auto py-2 px-2 scrollbar-hide scroll-smooth snap-x">
               {Object.entries(flipbookImagesData.projects).map(([projectId, images]) => (
                 <div key={projectId} className="snap-start shrink-0 w-[16rem] md:w-[8rem] transition-transform transform hover:scale-105">
-                  <Link className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl" href={`/work/${projectId[7]}`}>
+                  <div className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl" >
                     <CldImage
                       src={images[0]}
                       alt={`Project ${projectId}`}
@@ -55,9 +90,10 @@ const ProductPage = ({ product }) => {
                       sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw,33vw"
                       width={350}
                       height={220}
+                      whileHover={{ scale: 1.1 }}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 hover:bg-opacity-20 transition-all duration-300"></div>
-                  </Link>
+                  </div>
                   <div className="mt-2 md:mt-3 text-center text-white font-medium mb-4 text-sm md:text-base">
                     {projectId.toUpperCase()}
                   </div>
@@ -65,13 +101,13 @@ const ProductPage = ({ product }) => {
               ))}
             </div>
           </div>
-
         </div>
-
-
       </div>
     </div>
   );
 };
 
 export default ProductPage;
+
+
+// href={`/work/${projectId[7]}`}
