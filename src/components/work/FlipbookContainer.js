@@ -55,7 +55,7 @@ const FlipbookContainer = ({id,isPortrait,isMobile}) => {
         </div>
 
         <motion.div
-          className="relative z-10"
+          className="relative !z-0"
           style={{ overflow: "visible" }}
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
